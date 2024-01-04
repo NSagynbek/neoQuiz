@@ -1,0 +1,14 @@
+.root-layout{
+    width: 1410px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: #FFF9F5;
+}
+
+.quizum{
+    font-size: 28px;
+    font-weight: 400;
+    color: #000000;
+    margin-left: 16.6%;
+}
+

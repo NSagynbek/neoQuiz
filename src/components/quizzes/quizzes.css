@@ -1,0 +1,43 @@
+.quizzes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 265px;
+    height: 234px;
+    border-radius: 8px;
+    border: 1px  solid #000000;
+    background: #FFA9A3;
+    gap: 5px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.quizzess__title{
+    font-weight: 800;
+    font-size: 24px;
+    color: #000000;
+}
+
+.quizzess__questions{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+
+.quizzess__image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 128px;
+    height: 128px;
+}
+
+.quizzess__image{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
