@@ -15,7 +15,7 @@ function Home() {
         <div className='article-header-container'>
           <p className="home__articles">Статьи</p>  
           <NavLink to="/articles">
-            <InputAdornment className='article-header-btn'>
+            <InputAdornment className='article-header-btn' position='end'>
               <IconButton>
                 <ForwardIcon/>
               </IconButton>
@@ -29,7 +29,7 @@ function Home() {
       <div className='article-header-container'>
         <p className="home__articles">Квизы</p>   
         <NavLink to="/quizzes">
-          <InputAdornment className='article-header-btn'>
+          <InputAdornment className='article-header-btn' position='end'>
             <IconButton>
               <ForwardIcon/>
             </IconButton>
