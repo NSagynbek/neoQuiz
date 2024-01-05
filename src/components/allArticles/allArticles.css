@@ -4,6 +4,7 @@
     width: 940px;
     min-height: 100vh;
     margin: 0 auto;
+    position: relative;
 }
 
 .all-articles__header{

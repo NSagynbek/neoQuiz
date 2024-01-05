@@ -5,12 +5,13 @@ import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import Filter from "../filter/Filter"
 import HorizontalArticles from "../horizontalArticles/HorizontalArticles";
 import {NavLink} from "react-router-dom"
-import { useState } from "react";
+import { useState} from "react";
+import Pagination from "../pagination/Pagination"
 
 function AllArticles (){
 
   const [filter,setFilter] = useState(false);
-
+  const images = ["hi","buy"]
   function handleClick(){
     setFilter(!filter);
   }
@@ -55,7 +56,7 @@ function AllArticles (){
              <HorizontalArticles/>
              <HorizontalArticles/>
              </div>
-            
+            <Pagination data={images}/>
         </div>
     )
 }
