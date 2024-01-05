@@ -1,0 +1,15 @@
+.all-quizzes-container{
+    width: 940px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.all-quizzes__btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.all-quizzes-content{
+    
+}

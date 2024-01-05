@@ -1,0 +1,49 @@
+.horizontalArticle{
+    display: flex;
+    align-items: center;
+    width: 462px;
+    height: 160px;
+    border-radius: 8px;
+    border: 1px solid black;
+    background: #FFCCFD;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.article-text{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 57%;
+    margin-left: 10px;
+}
+
+.article-text__title{
+    font-size: 22px;
+    font-weight: 800;
+    color: black;
+}
+
+.article-text span {
+    font-size: 14px;
+    font-weight: 700;
+    color: black;
+}
+
+.article-image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 156px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.article-image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

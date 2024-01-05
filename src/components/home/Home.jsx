@@ -28,7 +28,7 @@ function Home() {
       <div className="quiz-section-container">
       <div className='article-header-container'>
         <p className="home__articles">Квизы</p>   
-        <NavLink to="/articles">
+        <NavLink to="/quizzes">
           <InputAdornment className='article-header-btn'>
             <IconButton>
               <ForwardIcon/>

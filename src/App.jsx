@@ -5,6 +5,7 @@ import RootLayout from "./components/layOuts/RootLayout"
 import PrivateRoutes from "./components/PrivateRoutes"
 import Home from "./components/home/Home"
 import AllArticles from "./components/allArticles/AllArticles"
+import AllQuizzes from "./components/allQuizzes/AllQiuzzes"
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           </Route>
           <Route path="/" element={<Home/>}/>
           <Route path="/articles" element={<AllArticles/>}/>
+          <Route path="/quizzes" element={<AllQuizzes/>}/>
 
         </Route>
 
