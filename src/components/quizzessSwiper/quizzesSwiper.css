@@ -14,10 +14,7 @@
     width: 100%;
     height: 512px;
     border-radius: 8px;
-    background: #C9F89B;
     cursor: pointer;
-    box-shadow: #C9F89B 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-
 }
 
 .quizzes-image-container{

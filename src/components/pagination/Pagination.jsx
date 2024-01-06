@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactPaginate from 'react-paginate';
 import "./pagination.css"
+import HorizontalArticles from "../horizontalArticles/HorizontalArticles";
 
 function Pagination(props) {
     const { data } = props;
@@ -22,17 +23,14 @@ function Pagination(props) {
     };
 
     return (
-        <div>
-            <div className="paginated-articles">
+        <div className="pagination-content">           
                 {currentItems.map((el, index) => {
-                    return (
-                        <div key={index}>
-                            {/* Content goes here */}
-                        </div>
+                    return (                       
+                          <HorizontalArticles key={index} article={el}/>                                                                                                                               
                     )
                 })}
-            </div>
-            {/* <Items currentItems={currentItems} /> */}
+            
+      
             <ReactPaginate
                 breakLabel="..."
                 nextLabel="next >"

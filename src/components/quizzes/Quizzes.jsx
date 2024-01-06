@@ -1,9 +1,10 @@
 import "./quizzes.css"
 import quizImage from "../../assets/historic.png"
+import { generateRandomColor,colors } from "../../utils";
 
 function Quizzes (){
     return (
-        <div className="quizzes">
+        <div className="quizzes" style={{background:generateRandomColor(colors)}}>
             <div className="quizzess__image-container">
                 <img className="quizzess__image" src={quizImage} alt={quizImage} />
             </div>

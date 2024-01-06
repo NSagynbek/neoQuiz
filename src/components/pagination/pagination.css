@@ -3,12 +3,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
     font-size: 1.2rem;
     gap: 5px;
     position: absolute;
-    bottom: 70px;
-    left: 40%;
+    bottom: 0;
+    left: 20%;
 }
 
 .pagination .page-num{
@@ -19,10 +18,21 @@
 }
 
 .pagination .page-num:hover{
-    background-color: #5AB1BB;
+    background-color:#000000;
     color: #fff;
 }
 
 .pagination .active{
-    background-color: #5AB1BB;
+    background-color: #000000;
+    color: white;
+}
+
+.pagination-content{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 3px;
+    margin-top: 30px;
+    gap: 10px;
+    width: 940px;
+    min-height: 100vh;
 }

@@ -1,10 +1,16 @@
 import "./quizzesSwiper.css";
 import aristotelHead from "../../assets/aristotelHead.png"
+import { generateRandomColor,generateRandomBoxShadow,colors } from "../../utils";
 
 function QuizzesSwiper (){
     return (
         <div className="quizzes-swiper">
-            <div className="quizzes-swiper__card">
+            <div className="quizzes-swiper__card" 
+              style={{
+                background:generateRandomColor(colors),
+                boxShadow: generateRandomBoxShadow()
+            }}
+            >
               <div className="quizzes-image-container">
                  <img className="quizzes-image-container__image" src={aristotelHead} alt={aristotelHead} />
               </div>

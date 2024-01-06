@@ -5,13 +5,32 @@ import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import Filter from "../filter/Filter"
 import HorizontalArticles from "../horizontalArticles/HorizontalArticles";
 import {NavLink} from "react-router-dom"
-import { useState} from "react";
+import {useState,useEffect} from "react";
 import Pagination from "../pagination/Pagination"
+import { getArticles } from "../../api";
 
 function AllArticles (){
 
   const [filter,setFilter] = useState(false);
-  const images = ["hi","buy"]
+  const [articles,setArticles] = useState([]);
+console.log(articles)
+  
+  useEffect(()=>{
+    const getData = async ()=>{
+      try{
+        const res = await getArticles();
+        setArticles(res)
+        console.log(res);
+      }catch(error){
+        console.log(error)
+      }
+      
+    }
+
+    getData()
+  },[]);
+
+
   function handleClick(){
     setFilter(!filter);
   }
@@ -21,7 +40,7 @@ function AllArticles (){
             <div  className="all-articles__header" >
                 <div className="all-articles__btn">      
                 <NavLink to="/">         
-                  <InputAdornment>
+                  <InputAdornment position="end">
                     <IconButton>
                       <KeyboardBackspaceIcon/>
                     </IconButton> 
@@ -36,7 +55,8 @@ function AllArticles (){
                     type="text" 
                     placeholder="Поиск статей"
                     />                   
-                    <InputAdornment 
+                    <InputAdornment
+                    position="end" 
                     onClick={handleClick}
                     >
                       <IconButton>
@@ -48,15 +68,10 @@ function AllArticles (){
             </div>
              
              <div className="all-articles-content">
-             {filter?<Filter/>:null}
-             <HorizontalArticles/>
-             <HorizontalArticles/>
-             <HorizontalArticles/>
-             <HorizontalArticles/>
-             <HorizontalArticles/>
-             <HorizontalArticles/>
+               {filter?<Filter/>:null}
+               <Pagination data={articles}/>
              </div>
-            <Pagination data={images}/>
+            
         </div>
     )
 }
