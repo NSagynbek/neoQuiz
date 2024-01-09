@@ -1,0 +1,137 @@
+.quiz-questions{
+    width: 940px;
+    min-height: 90vh;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 1px solid black;
+}
+
+.quiz-questions__header_navigation{
+    display: flex;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.quiz-questions__header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50px;
+    gap: 20px;
+}
+
+.quiz-questions__tracker{
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+
+}
+
+.back-btn{
+    position: absolute;
+    left: 0;
+}
+
+.quiz-questions__percentage-container{
+    width: 100%;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 13px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.quiz-questions__percentage{
+    height: 100%;
+    background-color: #B9FFA0;
+}
+
+.quiz-questions__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    height: 70vh;
+    gap: 20px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.quiz-questions__question{
+    font-size: 32px;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+}
+
+.quiz-questions__choice{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.quiz-questions__choice button{
+    width: 358px;
+    height: 48px;
+    border-radius: 8px;
+    padding: 8px 16px 8px 16px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    border: 1px solid gray;
+    transition: 0.025s ease-in-out;
+}
+
+.quiz-questions__choice_btn:hover{
+    border: 2px solid rgb(152, 43, 230);
+
+}
+
+.correct{
+    width: 358px;
+    height: 48px;
+    border-radius: 8px;
+    padding: 8px 16px 8px 16px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    border: 1px solid gray;
+    background: #B9FFA0;
+    transition: 0.025s ease-in-out;
+}
+
+.wrong{
+    width: 358px;
+    height: 48px;
+    border-radius: 8px;
+    padding: 8px 16px 8px 16px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    border: 1px solid gray;
+    background: #EF6E6E;
+    transition: 0.025s ease-in-out;
+}
+
+.quiz-questions__submit_btn{
+    width: 358px;
+    height: 48px;
+    border-radius: 8px;
+    padding: 8px 16px 8px 16px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    background: black;
+    color: white;
+}

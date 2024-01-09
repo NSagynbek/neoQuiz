@@ -1,6 +1,7 @@
 import Articles from '../articles/Articles';
 import Quizzes from '../quizzes/Quizzes';
 import SwiperComponent from '../swiper/SwiperComponent';
+import SwiperComponentforQuiz from "../swiper/SwiperComponentforQuiz";
 import { IconButton, InputAdornment } from '@mui/material';
 import ForwardIcon from '@mui/icons-material/Forward';
 import {NavLink} from "react-router-dom"
@@ -22,7 +23,7 @@ function Home() {
             </InputAdornment> 
           </NavLink>  
         </div>    
-        <SwiperComponent content={Articles} />
+        <SwiperComponent content={Articles}/>
       </div>
 
       <div className="quiz-section-container">
@@ -36,7 +37,7 @@ function Home() {
           </InputAdornment> 
         </NavLink>  
         </div>        
-        <SwiperComponent content={Quizzes} />
+        <SwiperComponentforQuiz content={Quizzes}/>
       </div>
     </div>
   );

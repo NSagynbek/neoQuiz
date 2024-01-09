@@ -1,0 +1,25 @@
+.notFound{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 940px;
+    height: 60vh;
+    margin: 0 auto;
+}
+
+.notFound__content{
+    display: flex;
+    flex-direction: column;
+    width: 331px;
+    height: 331px;
+    align-items: center;
+    justify-content: center;
+}
+
+.notFound__text{
+    font-size: 22px;
+    font-weight:500 ;
+    color: #5D5D5D;
+    text-align: center;
+}

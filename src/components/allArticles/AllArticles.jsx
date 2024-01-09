@@ -69,7 +69,16 @@ console.log(articles)
              
              <div className="all-articles-content">
                {filter?<Filter/>:null}
-               <Pagination data={articles}/>
+
+               {articles&&articles.results&&articles.results.length>0?(
+
+                articles.results.map((el,index)=>(
+                  <HorizontalArticles key={index} article={el}/>
+                ))
+
+               ):(
+                <></>
+               )}
              </div>
             
         </div>

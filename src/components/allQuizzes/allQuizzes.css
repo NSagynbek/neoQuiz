@@ -16,3 +16,8 @@
     align-items: center;
     margin-top: 20px;
 }
+
+.quiz-NavLink{
+    text-decoration: none;
+    color: black;
+}

@@ -44,5 +44,10 @@
 .article-image{
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: fill;
+}
+
+.details-navLink{
+    text-decoration: none;
+    color: black;
 }

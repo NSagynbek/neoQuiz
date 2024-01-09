@@ -1,10 +1,12 @@
 import {
-    FETCHING_DATA
+    FETCHING_DATA,
+    SET_FILTERED_ARTICLES,
 } from "./actionTypes"
 
 const initialState = {
     loading:false,
     isAllowed: false,
+    filteredArticlesData:[],
 }
 
 const reducer = (state = initialState,action)=>{
@@ -14,6 +16,11 @@ const reducer = (state = initialState,action)=>{
                 ...state,
                 loading:true
             };
+        case SET_FILTERED_ARTICLES:
+            return {
+                ...state,
+                filteredArticlesData:action.payload,
+            }    
     }
 
 }

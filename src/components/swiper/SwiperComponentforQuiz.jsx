@@ -9,14 +9,11 @@ import 'swiper/css/scrollbar';
 
 function SwiperComponent ({content:Content}){
 
-  const[articles,setArticles] = useState([]);
   const[quizzes,setQuizzes] = useState([]);
-console.log(articles)
+
   useEffect(()=>{
     const getArticlesData = async ()=>{
       try{
-        const res = await getArticles();
-        setArticles(res);
         const response = await getQuizzes();
         console.log(response)
         setQuizzes(response);
@@ -39,8 +36,8 @@ console.log(articles)
       pagination={{ clickable: true }}
     >
       
-    {articles && articles.results && articles.results.length > 0 ? (
-      articles.results.map((el, index) => (
+      {quizzes && quizzes.results && quizzes.results.length > 0 ? (
+      quizzes.results.map((el, index) => (
       <SwiperSlide key={index}>
         <Content el={el} />
       </SwiperSlide>
@@ -48,7 +45,7 @@ console.log(articles)
     ) : (
       <></> 
     )}
-           
+               
     </Swiper>
 
     )    

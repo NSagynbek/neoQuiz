@@ -17,3 +17,18 @@ export const getArticlesById = async (id)=>{
     return response.data
 }
 
+export const getQuizzes = async ()=>{
+    const response = await instance.get("quizzes/")
+    return response.data
+}
+
+export const quizWelcomPage = async (id)=>{
+    const response = await instance.get(`quizzes/${id}/welcome/`);
+    return response.data
+}
+
+export const quizQuestions = async (id)=>{
+    const response = await instance.get(`quizzes/${id}/questions/`);
+    return response.data
+}
+
