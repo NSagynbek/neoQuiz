@@ -46,6 +46,7 @@
     font-size: 32px;
     font-weight: 700;
     color: #000000;
+    cursor: pointer;
 }
 
 .all-articles-content{
@@ -54,4 +55,14 @@
     flex-wrap: wrap;
     gap: 10px;
 }
+
+.pagination-rounded{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 940px;
+    height: 50px;
+}
+
+
 

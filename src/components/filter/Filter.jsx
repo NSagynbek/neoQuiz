@@ -5,21 +5,35 @@ import { articlesTest } from "../../utils";
 import {useDispatch} from "react-redux"
 import {setFilteredArticles} from "../../redux"
 
-function Filter (){
-    const dispatch = useDispatch();
-    const [filteredArticles,setFilteredArticles] =useState([]);
+function Filter ({getByCategories,handleClick}){
+     
     const [categories,setCategories] = useState([]);
-    console.log(categories)
-    console.log(filteredArticles)
+    
+    
+    const categoryVals = {};
+    
+    categories.forEach((el) => {
+      if (el === "history") {
+        categoryVals[el] = "2";
+      } 
+      else if(el === "philosophy"){
+        categoryVals[el] = "1";
+      }
 
-    // useEffect(()=>{
-    //     const getdata = async ()=>{
-    //         const response = await getArticles();
-    //         setArticles(response);
-    //     }
-    //     getdata();
-    // },[]);
+      else if(el === "psychology"){
+        categoryVals[el] = "6";
+      }
 
+      else if(el === "movie"){
+        categoryVals[el] = "8";
+      }
+
+      else if(el === "literature"){
+        categoryVals[el] = "5";
+      }
+    });
+    
+    
 
     const handleCheckBox = (e)=>{
       const {name,checked} = e.target;
@@ -31,17 +45,11 @@ function Filter (){
 
     }
 
-    // useEffect(()=>{
-    //     setFilteredArticles((prev)=>{
-    //         return articlesTest.filter(article => categories.includes(article.category));
-    //     })
-    // console.log("use effet run")
-    // },[categories])
-
-    useEffect(() => {
-        const filteredData = articlesTest.filter((article) => categories.includes(article.category));
-        dispatch(setFilteredArticles(filteredData));
-      }, [categories, dispatch]);
+    const sendCategories = ()=>{
+      getByCategories(categoryVals);
+      handleClick();
+    }
+    
 
     return (
         <div className="filter-container">
@@ -92,26 +100,8 @@ function Filter (){
                     />
                     Психология
                 </label>
-                <label htmlFor="art">
-                    <input 
-                    type="checkbox" 
-                    id="art" 
-                    name="art"
-                    onChange={handleCheckBox}
-                    checked={categories.includes("art")}
-                    />
-                    Искусство
-                </label>
-                <label htmlFor="music">
-                    <input 
-                    type="checkbox" 
-                    id="music" 
-                    name="music"
-                    onChange={handleCheckBox}
-                    checked={categories.includes("music")}
-                    />
-                    Музыка
-                </label>
+               
+                
                 <label htmlFor="movie">
                     <input 
                     type="checkbox" 
@@ -126,7 +116,7 @@ function Filter (){
 
             <button 
             className="filter-container__btn"
-            type="submit"
+             onClick={sendCategories}
             >Применить</button>
             
         </div>

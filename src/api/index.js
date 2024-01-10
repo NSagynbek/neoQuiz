@@ -7,8 +7,12 @@ const instance = axios.create({
     }
 });
 
-export const getArticles = async ()=>{
-    const response = await instance.get("articles/")
+export const getArticles = async (page)=>{
+    const response = await instance.get("articles/",{
+        params:{
+            page:page
+        }
+    })
     return response.data
 }
 
@@ -32,3 +36,17 @@ export const quizQuestions = async (id)=>{
     return response.data
 }
 
+export const searchArticles = async (search)=>{
+    const response = await instance.get("articles/",{
+        params:{
+            search:search
+        }
+    });
+    return response.data
+}
+
+
+export const articleCategories = async (queryString)=>{
+    const response = await instance.get(`articles/?${queryString}`);
+    return response.data
+}

@@ -111,7 +111,11 @@ function QuizQuestions (){
                 </div>
             </div>
             {tracker>5?(
-              <Results id={id} score={score} totalQuestions={questions?questions[0].quiz.total_questions:""}/>
+              <Results 
+                id={id} 
+                score={score} 
+                totalQuestions={questions?(
+                  questions[0].quiz.total_questions):("")}/>
             ):(
               <div className="quiz-questions__content">
                 <p className="quiz-questions__question">{questions?questions[next].title:""}</p>
