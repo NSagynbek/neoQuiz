@@ -13,21 +13,18 @@ function QuizQuestions (){
   const {id} = useParams(); 
   const [questions,setQuestions] = useState([]);
   const [next,setNext] = useState(0);
-  const [tracker,setTracker] = useState(0);
+  const [tracker,setTracker] = useState(questions.length);
   const [isCompleted,setIsCompleted] = useState(false);
   const [lock,setLock] = useState(false);
   const [score,setScore] = useState(0);
-  const maxTracker = 6;
+  const maxTracker = questions.length;
+  const checkPoint = questions.length -1;
   const calculatedWidth = (tracker / maxTracker) * 100;
- console.log(score)
+
 
   const optionRefs = Array.from({ length:4}, () => useRef(null));
   const option_array = optionRefs.map((ref) => ref.current);
   
-
-
-  console.log(questions);
-
   useEffect(()=>{
     const getQuestions = async ()=>{
       const response = await quizQuestions(id)
@@ -74,7 +71,7 @@ function QuizQuestions (){
     })
 
 
-    if(tracker>4){
+    if(tracker>checkPoint){
       setIsCompleted(!isCompleted);
     }
     resetStyles()
@@ -83,7 +80,7 @@ function QuizQuestions (){
 
 
     return (
-      <div>
+      <div className="quiz-questions-container">
           <div className="quiz-questions__header_navigation">
             <NavLink to="/quizzes">         
               <InputAdornment position="end" className="back-btn">
@@ -110,12 +107,13 @@ function QuizQuestions (){
                     ></div>
                 </div>
             </div>
-            {tracker>5?(
+            {tracker>checkPoint?(
               <Results 
                 id={id} 
                 score={score} 
                 totalQuestions={questions?(
-                  questions[0].quiz.total_questions):("")}/>
+                questions[0].quiz.total_questions):("")}
+              />
             ):(
               <div className="quiz-questions__content">
                 <p className="quiz-questions__question">{questions?questions[next].title:""}</p>
@@ -149,7 +147,7 @@ function QuizQuestions (){
         </div>
 
           ):(
-            <NotFound/>
+            <NotFound />
           )}
         
       </div>  

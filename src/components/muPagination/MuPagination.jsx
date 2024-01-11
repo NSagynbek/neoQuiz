@@ -11,7 +11,7 @@ export default function PaginationRounded({pageControll}) {
   return (
     <Stack spacing={2}>
       <Pagination 
-        count={10} 
+        count={3} 
         variant="outlined" 
         shape="rounded" 
         onChange={handleChange}

@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 function Quizzes ({el}){
     return (
         <NavLink 
-        to={`/quiz-intro/${el.id}`}
+        to={`/quiz-intro-for-swiper/${el.id}`}
         className="quiz-link"
         >
         <div className="quizzes" style={{background:generateRandomColor(colors)}}>

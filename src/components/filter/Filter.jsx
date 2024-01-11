@@ -1,17 +1,18 @@
 import "./filter.css"
 import { useState,useEffect } from "react";
 import { getArticles } from "../../api";
-import { articlesTest } from "../../utils";
 import {useDispatch} from "react-redux"
 import {setFilteredArticles} from "../../redux"
 
 function Filter ({getByCategories,handleClick}){
      
     const [categories,setCategories] = useState([]);
+    const [isActive,setIsActive] = useState(false);
     
-    
+       
     const categoryVals = {};
-    
+
+
     categories.forEach((el) => {
       if (el === "history") {
         categoryVals[el] = "2";
@@ -19,26 +20,26 @@ function Filter ({getByCategories,handleClick}){
       else if(el === "philosophy"){
         categoryVals[el] = "1";
       }
-
+  
       else if(el === "psychology"){
         categoryVals[el] = "6";
       }
-
+  
       else if(el === "movie"){
         categoryVals[el] = "8";
       }
-
+  
       else if(el === "literature"){
         categoryVals[el] = "5";
       }
     });
+  
     
-    
-
     const handleCheckBox = (e)=>{
       const {name,checked} = e.target;
       if(checked){
         setCategories(prev => [...prev,name])
+        setIsActive(true)
       }else{
         setCategories(prev=>prev.filter(category => category !==name));
       }
@@ -115,8 +116,10 @@ function Filter ({getByCategories,handleClick}){
             </div>
 
             <button 
-            className="filter-container__btn"
-             onClick={sendCategories}
+              className={isActive?
+               ("filter-container__btn-active")
+              :("filter-container__btn")}
+              onClick={sendCategories}
             >Применить</button>
             
         </div>

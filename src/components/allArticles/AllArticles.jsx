@@ -113,15 +113,18 @@ function AllArticles (){
     return (
         <div className="all-articles">
             <div  className="all-articles__header" >
-                <div className="all-articles__btn">      
-                <NavLink to="/">         
-                  <InputAdornment position="end">
-                    <IconButton>
-                      <KeyboardBackspaceIcon/>
-                    </IconButton> 
-                  </InputAdornment>
-                </NavLink>  
-                   
+                <div className="all-articles__btn">    
+                  {isFiltered?(
+                    ""
+                  ):(
+                    <NavLink to="/">         
+                      <InputAdornment position="end">
+                        <IconButton>
+                          <KeyboardBackspaceIcon/>
+                        </IconButton> 
+                      </InputAdornment>
+                    </NavLink>  
+                  )}                  
                   <p className="all-articles__title" onClick={backToAllArtcs}>
                     Все статьи
                   </p>
@@ -187,7 +190,7 @@ function AllArticles (){
               
             </div>
             <div className="pagination-rounded">
-              <PaginationRounded pageControll={pageControll}/>
+              {isFiltered?"":<PaginationRounded pageControll={pageControll}/>}
             </div>
             
         </div>

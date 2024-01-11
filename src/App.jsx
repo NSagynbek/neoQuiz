@@ -12,6 +12,7 @@ import QuizQuestions from "./components/quizQuestions/QuizQuestions"
 import Results from "./components/results/Results"
 import NotFound from "./components/notFound/NotFound"
 import ArticleDetailsforHorizontal from "./components/articleDetails/ArticleDetailsforHorizontal"
+import QuizIntroforSwiper from "./components/quizeIntro/QuizIntroforSwiper"
 
 function App() {
   
@@ -31,6 +32,7 @@ function App() {
           <Route path="/details/:id" element={<ArticleDetails/>}/>
           <Route path="/details-horizontal/:id" element={<ArticleDetailsforHorizontal/>}/>
           <Route path="/quiz-intro/:id" element={<QuizIntro/>}/>
+          <Route path="/quiz-intro-for-swiper/:id" element={<QuizIntroforSwiper/>}/>
           <Route path="/quiz-questions/:id" element={<QuizQuestions/>}/>
           <Route path="/results" element={<Results/>}/>
           <Route path="/not-found" element={<NotFound/>}/>

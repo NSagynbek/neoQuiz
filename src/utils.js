@@ -33,14 +33,10 @@ export const generateRandomBoxShadow = () => {
     return `${randomColor} 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px`;
 }
 
-export const articlesTest = [
-    { category: 'art', title: 'Art article 1', content: 'Lorem ipsum' },
-    { category: 'history', title: 'History article 1', content: 'Lorem ipsum' },
-    { category: 'literature', title: 'Literature article 1', content: 'Lorem ipsum' },
-    { category: 'philosophy', title: 'Philosophy article 1', content: 'Lorem ipsum' },
-    { category: 'music', title: 'Music article 1', content: 'Lorem ipsum' } 
-  ];
+
   
+
+
 
 
 

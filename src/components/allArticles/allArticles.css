@@ -54,6 +54,7 @@
     position: relative;
     flex-wrap: wrap;
     gap: 10px;
+    margin-bottom:50px;
 }
 
 .pagination-rounded{
@@ -62,6 +63,8 @@
     justify-content: center;
     width: 940px;
     height: 50px;
+    position: absolute;
+    bottom: 0;
 }
 
 

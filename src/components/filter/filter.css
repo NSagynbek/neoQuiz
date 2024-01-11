@@ -3,7 +3,7 @@
     flex-direction: column;
     gap: 30px;
     width: 353px;
-    height: 557px;
+    height: 475px;
     border-radius: 8px;
     border: 1px solid black;
     background: #ffffff;
@@ -72,6 +72,19 @@
     border-radius: 8px;
     padding: 8px 16px 8px 16px;
     background: #939393;
+    color: #ffffff;
+    margin: 0 auto;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-container__btn-active{
+    width: 289px;
+    height: 48px;
+    border-radius: 8px;
+    padding: 8px 16px 8px 16px;
+    background: black;
     color: #ffffff;
     margin: 0 auto;
     outline: none;

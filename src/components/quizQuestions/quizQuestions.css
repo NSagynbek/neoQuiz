@@ -1,3 +1,9 @@
+.quiz-questions-container{
+    width: 940px;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
 .quiz-questions{
     width: 940px;
     min-height: 90vh;

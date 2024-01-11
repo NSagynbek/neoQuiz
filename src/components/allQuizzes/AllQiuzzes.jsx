@@ -27,8 +27,7 @@ function AllQuizzes (){
                       <KeyboardBackspaceIcon/>
                     </IconButton> 
                   </InputAdornment>
-               </NavLink>  
-                   
+               </NavLink>                    
               <p className="all-articles__title">Все квизы</p>
             </div>
 
