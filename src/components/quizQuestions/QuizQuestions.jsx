@@ -94,9 +94,14 @@ function QuizQuestions (){
             <div className="quiz-questions">
             <div className="quiz-questions__header">
               <div className="quiz-questions__header_navigation"> 
-                <div className="quiz-questions__tracker">
-                    <span>Вопрос</span><span> {tracker}</span><span> из {questions?questions[0].quiz.total_questions:""}</span>
-                </div>
+                {tracker>checkPoint?(
+                  <p>100%</p>
+                ):(
+                  <div className="quiz-questions__tracker">
+                    <span>Вопрос</span><span> {tracker+1}</span><span> из {questions?questions[0].quiz.total_questions:""}</span>
+                  </div>
+                )}
+                
               </div>
 
                 <div className="quiz-questions__percentage-container">
