@@ -10,7 +10,7 @@ function HorizontalArticles ({article}){
               <div className="article-text">
                   <p className="article-text__title">{article.title}</p>
                   <div>
-                    <span>#История</span> <span>&#9900;</span> <span>{article.time_to_read} минут</span>
+                    <span>#{article.category.name}</span> <span>&#9900;</span> <span>{article.time_to_read} минут</span>
                   </div>
               </div>
               <div className="article-image-container">
