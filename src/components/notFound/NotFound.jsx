@@ -1,5 +1,5 @@
 import "./notFound.css";
-import notFound from "../../assets/notFound.png"
+import notFound from "../../assets/notfound.png"
 function NotFound (){
     return (
         <div className="notFound">
