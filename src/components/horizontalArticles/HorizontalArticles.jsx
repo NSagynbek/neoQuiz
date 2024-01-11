@@ -9,7 +9,7 @@ function HorizontalArticles ({article}){
           <div className="horizontalArticle" style={{background:generateRandomColor(colors)}}>
               <div className="article-text">
                   <p className="article-text__title">{article.title}</p>
-                  <div>
+                  <div className="article-text__category">
                     <span>#{article.category.name}</span> <span>&#9900;</span> <span>{article.time_to_read} минут</span>
                   </div>
               </div>

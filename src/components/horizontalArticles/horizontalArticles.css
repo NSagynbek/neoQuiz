@@ -16,6 +16,8 @@
     gap: 30px;
     width: 57%;
     margin-left: 10px;
+    height: 80%;
+    position: relative;
 }
 
 .article-text__title{
@@ -50,4 +52,9 @@
 .details-navLink{
     text-decoration: none;
     color: black;
+}
+
+.article-text__category{
+    position: absolute;
+    bottom: 0;
 }
