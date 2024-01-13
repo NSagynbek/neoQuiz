@@ -8,13 +8,13 @@ import { NavLink } from "react-router-dom";
 
 function ArticleDetailsforHorizontal (){
     const {id} = useParams();
-    const [article,setArticle] = useState([]);
+    const [article,setArticle] = useState(null);
     console.log(article)
     useEffect(()=>{
         const getArticle = async ()=>{
             try{
-                const res = await getArticlesById(id);
-                setArticle(res)
+                const res = await getArticlesById(id);              
+                  setArticle(res)                
             }catch(error){
                 console.log(error);
             }           
@@ -22,30 +22,33 @@ function ArticleDetailsforHorizontal (){
         getArticle();
     },[]);
 
-
-    return (
+    if(!article){
+      return <p>Loading...</p>
+    }else{
+      return (
         <div className="article-details">
-            <div className="article-details__btn">
-              <NavLink to="/articles">         
-                <InputAdornment position="end">
-                  <IconButton>
-                    <KeyboardBackspaceIcon/>
-                  </IconButton> 
-                </InputAdornment>
-             </NavLink> 
-            </div>
-
-            <div className="article-details__category">
-              <p>{article.title}</p>
-              <div>
-                <span>#История</span> <span>&#9900;</span> <span>15 минут</span>
-              </div>
-            </div>
-
-            <p className="article-details-article">{article.content}</p>
-
+          <div className="article-details__btn">
+            <NavLink to="/articles">         
+              <InputAdornment position="end">
+                <IconButton>
+                  <KeyboardBackspaceIcon/>
+                </IconButton> 
+              </InputAdornment>
+           </NavLink> 
         </div>
-    )
-}
+
+        <div className="article-details__category">
+          <p>{article.title}</p>
+          <div>
+            <span># {article.category.name}</span> 
+            <span> &#9900; </span> 
+            <span>{article.time_to_read} минут</span>
+          </div>
+        </div>
+
+        <p className="article-details-article">{article.content}</p>
+
+    </div>
+)}}
 
 export default ArticleDetailsforHorizontal;

@@ -13,7 +13,7 @@ function QuizQuestions (){
   const {id} = useParams(); 
   const [questions,setQuestions] = useState([]);
   const [next,setNext] = useState(0);
-  const [tracker,setTracker] = useState(questions.length);
+  const [tracker,setTracker] = useState(0);
   const [isCompleted,setIsCompleted] = useState(false);
   const [lock,setLock] = useState(false);
   const [score,setScore] = useState(0);
