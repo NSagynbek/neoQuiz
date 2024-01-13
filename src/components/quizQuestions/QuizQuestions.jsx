@@ -23,7 +23,9 @@ function QuizQuestions (){
 
 
   const optionRefs = Array.from({ length:4}, () => useRef(null));
-  const option_array = optionRefs.map((ref) => ref.current);
+ 
+  console.log(optionRefs)
+  console.log(questions)
   
   useEffect(()=>{
     const getQuestions = async ()=>{
