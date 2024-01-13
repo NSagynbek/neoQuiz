@@ -23,7 +23,7 @@ function ArticleDetailsforHorizontal (){
     },[]);
 
     if(!article){
-      return <p>Loading...</p>
+      return <p></p>
     }else{
       return (
         <div className="article-details">
