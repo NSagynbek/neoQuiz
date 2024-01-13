@@ -50,9 +50,8 @@
 }
 
 .filter-categories input{
-    width: 32px;
-    height: 32px;
-    border-radius: 6px;
+    width: 25px;
+    height: 25px;
     cursor: pointer;
 }
 
@@ -91,3 +90,4 @@
     border: none;
     cursor: pointer;
 }
+

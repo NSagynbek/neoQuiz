@@ -45,7 +45,6 @@ function ArticleDetailsforHorizontal (){
             <span>{article.time_to_read} минут</span>
           </div>
         </div>
-
         <p className="article-details-article">{article.content}</p>
 
     </div>
