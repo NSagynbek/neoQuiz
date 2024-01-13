@@ -1,8 +1,5 @@
 import "./filter.css"
-import { useState,useEffect } from "react";
-import { getArticles } from "../../api";
-import {useDispatch} from "react-redux"
-import {setFilteredArticles} from "../../redux"
+import { useState} from "react";
 
 function Filter ({getByCategories,handleClick}){
      

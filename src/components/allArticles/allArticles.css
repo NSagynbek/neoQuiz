@@ -67,5 +67,15 @@
     bottom: 0;
 }
 
+.all-article__search-input{
+    position: relative;
+}
+
+.all-article__search-btn{
+    position: absolute;
+    right: 0;
+    top: 25px;
+}
+
 
 

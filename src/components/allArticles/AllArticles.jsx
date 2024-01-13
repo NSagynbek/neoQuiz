@@ -1,12 +1,12 @@
 import "./allArticles.css"
 import { IconButton, InputAdornment } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import Filter from "../filter/Filter"
 import HorizontalArticles from "../horizontalArticles/HorizontalArticles";
 import {NavLink} from "react-router-dom"
 import {useState,useEffect} from "react";
-import Pagination from "../pagination/Pagination"
 import { getArticles,searchArticles,articleCategories} from "../../api";
 import NotFound from "../notFound/NotFound"
 import PaginationRounded from "../muPagination/MuPagination";
@@ -109,7 +109,6 @@ function AllArticles (){
   }
 
   
-
     return (
         <div className="all-articles">
             <div  className="all-articles__header" >
@@ -135,15 +134,24 @@ function AllArticles (){
                   <form
                     onSubmit={handleSubmit}
                   >
-                    <input 
-                    type="text" 
-                    placeholder="Поиск статей"
-                    onChange={(e)=>handleChange(e)}
-                    />    
+                    <div className="all-article__search-input">
+                      <InputAdornment 
+                        position="start" 
+                        className="all-article__search-btn">
+                        <IconButton>
+                          <SearchIcon onClick={handleSubmit}/>
+                        </IconButton>
+                      </InputAdornment>
+                      <input 
+                        type="text" 
+                        placeholder="Поиск статей"
+                        onChange={(e)=>handleChange(e)}
+                      />   
+                    </div> 
                   </form>                  
                     <InputAdornment
-                    position="end" 
-                    onClick={handleClick}
+                      position="end" 
+                      onClick={handleClick}
                     >
                       <IconButton>
                         <FilterAltIcon/>

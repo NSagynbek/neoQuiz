@@ -6,9 +6,11 @@ import QuizzesSwiper from "../quizzessSwiper/QuizzesSwiper";
 import QuizeSwipercomponent from "../swiper/QuizeSwipercomponent"
 import { useState,useEffect } from "react";
 import { getQuizzes } from "../../api";
+import SwiperIndicator from "../swipeIndicator/Swiperindicator";
 
 function AllQuizzes (){
   const [quizzes,setQuizzes] = useState([]);
+  const [isSwiping, setIsSwiping] = useState(false);
 
   useEffect(()=>{
     const getQuizzesData = async ()=>{
@@ -17,6 +19,10 @@ function AllQuizzes (){
     } 
     getQuizzesData();
   },[]);
+
+  setTimeout(() => {
+    setIsSwiping(true);
+  },6000);
 
     return (
         <div className="all-quizzes-container">
@@ -31,8 +37,12 @@ function AllQuizzes (){
               <p className="all-articles__title">Все квизы</p>
             </div>
 
-            <div className="all-quizzes-content">       
-              <QuizeSwipercomponent quizzes={quizzes} component={QuizzesSwiper}/>
+            <div className="all-quizzes-content">   
+              {isSwiping?null:<SwiperIndicator />}
+              <QuizeSwipercomponent 
+                quizzes={quizzes} 
+                component={QuizzesSwiper}
+              />
             </div>
 
         </div>
