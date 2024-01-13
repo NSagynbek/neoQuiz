@@ -23,10 +23,7 @@ function QuizQuestions (){
 
 
   const optionRefs = Array.from({ length:4}, () => useRef(null));
- 
-  console.log(optionRefs)
-  console.log(questions)
-  
+   
   useEffect(()=>{
     const getQuestions = async ()=>{
       const response = await quizQuestions(id)
