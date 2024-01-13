@@ -6,7 +6,7 @@ import QuizzesSwiper from "../quizzessSwiper/QuizzesSwiper";
 import QuizeSwipercomponent from "../swiper/QuizeSwipercomponent"
 import { useState,useEffect } from "react";
 import { getQuizzes } from "../../api";
-import SwiperIndicator from "../swipeIndicator/Swiperindicator";
+import SwiperIndicator from "../swipeIndicator/SwiperIndicator";
 
 function AllQuizzes (){
   const [quizzes,setQuizzes] = useState([]);
