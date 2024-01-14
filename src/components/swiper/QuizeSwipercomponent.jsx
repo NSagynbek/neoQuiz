@@ -4,10 +4,8 @@ import "./swiper.css"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards } from 'swiper/modules';
 
-
 function QuizeSwipercomponent ({quizzes,component:Component}){
  
-
     return (
 
       <Swiper
@@ -18,11 +16,8 @@ function QuizeSwipercomponent ({quizzes,component:Component}){
       >       
           {quizzes&&quizzes.results?(
             quizzes.results.map((el,index)=>(
-              <SwiperSlide >
-                <Component 
-                  key={index} 
-                  el={el}                 
-                  />
+              <SwiperSlide>
+                <Component key={index} el={el}/>
               </SwiperSlide>
             ))
           ):(

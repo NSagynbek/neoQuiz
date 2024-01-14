@@ -5,10 +5,8 @@ function Filter ({getByCategories,handleClick}){
      
     const [categories,setCategories] = useState([]);
     const [isActive,setIsActive] = useState(false);
-    
-       
+      
     const categoryVals = {};
-
 
     categories.forEach((el) => {
       if (el === "history") {
@@ -38,9 +36,8 @@ function Filter ({getByCategories,handleClick}){
         setCategories(prev => [...prev,name])
         setIsActive(true)
       }else{
-        setCategories(prev=>prev.filter(category => category !==name));
+        setCategories(prev=>prev.filter(category => category !== name));
       }
-
     }
 
     const sendCategories = ()=>{
@@ -48,14 +45,15 @@ function Filter ({getByCategories,handleClick}){
       handleClick();
     }
     
-
     return (
-        <div className="filter-container">
-          
+        <div className="filter-container">         
             <div className="filter-header">
-                <p className="filter-header__text">Фильтр</p>
-                
-                <button className="filter-header__btn">Сбросить все</button>
+                <p className="filter-header__text">Фильтр</p>               
+                <button 
+                  className="filter-header__btn"
+                >
+                  Сбросить все
+                </button>
             </div>
             <div className="filter-categories">
                 <label htmlFor="history" >
@@ -117,7 +115,9 @@ function Filter ({getByCategories,handleClick}){
                ("filter-container__btn-active")
               :("filter-container__btn")}
               onClick={sendCategories}
-            >Применить</button>
+            >
+              Применить
+            </button>
             
         </div>
     )

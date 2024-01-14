@@ -8,7 +8,6 @@ import {NavLink} from "react-router-dom"
 import "./home.css"
 
 
-
 function Home() {
   return (
     <div className="home">

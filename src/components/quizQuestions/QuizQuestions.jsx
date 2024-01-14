@@ -1,5 +1,5 @@
 import "./quizQuestions.css";
-import { IconButton, InputAdornment, buttonBaseClasses } from '@mui/material';
+import { IconButton, InputAdornment} from '@mui/material';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import {NavLink,useParams} from "react-router-dom"
 import { useState,useEffect,useRef } from "react";

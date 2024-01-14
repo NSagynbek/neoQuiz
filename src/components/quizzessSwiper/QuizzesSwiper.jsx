@@ -14,13 +14,13 @@ function QuizzesSwiper ({el}){
               style={{
                 background:generateRandomColor(colors),
                 boxShadow: generateRandomBoxShadow()
-            }}
+              }}
             >
               <div className="quizzes-image-container">
                  <img 
                    className="quizzes-image-container__image" 
                    src={el.quiz_cover} 
-                   alt={aristotelHead} 
+                   alt="quiz cover photo" 
                    />
               </div>
 

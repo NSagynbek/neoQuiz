@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, A11y } from 'swiper/modules';
-import { getArticles,getQuizzes } from '../../api';
+import {getQuizzes } from '../../api';
 import { useState,useEffect } from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -12,17 +12,15 @@ function SwiperComponent ({content:Content}){
   const[quizzes,setQuizzes] = useState([]);
 
   useEffect(()=>{
-    const getArticlesData = async ()=>{
+    const getQuizzesData = async ()=>{
       try{
         const response = await getQuizzes();
-        console.log(response)
         setQuizzes(response);
       }catch(error){
         console.log(error);
       }
-
     }
-    getArticlesData();
+    getQuizzesData();
   },[]);
   
 

@@ -27,19 +27,16 @@ function AllArticles (){
     const getData = async ()=>{
       try{
         const res = await getArticles(page);
-        console.log(res)
         setArticles(res)
       }catch(error){
         console.log(error)
-      }
-      
+      }     
     }
-
     getData()
   },[page]);
 
 
-  const pageControll =(p)=>{
+  const pageControll = (p)=>{
     setPage(p)
   }
 
@@ -90,7 +87,6 @@ function AllArticles (){
       queryParams.push(`category=${movie}`);
     }
     
-  
     const queryString = queryParams.join('&');
   
     try {
@@ -138,8 +134,8 @@ function AllArticles (){
                       <InputAdornment 
                         position="start" 
                         className="all-article__search-btn">
-                        <IconButton>
-                          <SearchIcon onClick={handleSubmit}/>
+                        <IconButton onClick={handleSubmit}>
+                          <SearchIcon/>
                         </IconButton>
                       </InputAdornment>
                       <input 
